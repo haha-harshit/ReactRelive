@@ -1,6 +1,8 @@
 import React from 'react'
+// const hu="hi"
+import PropTypes from 'prop-types'
 
-function NavBar(props) {
+export default function NavBar(props) {
   return (
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,10 +17,8 @@ function NavBar(props) {
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Link</a>
+                <a className="nav-link" href="/">{props.link}</a>
             </li>
-            
-            
             </ul>
             <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -31,4 +31,8 @@ function NavBar(props) {
   )
 }
 
-export default NavBar
+NavBar.propTypes = 
+    {
+        title: PropTypes.string,
+        link: PropTypes.string
+    }
