@@ -10,8 +10,8 @@ function App() {
   return (
     <>
     <div className="inp-form">
-      {/* <NavBar title="Harshit" link="link1"/> */}
-      <NavBar/>
+      <NavBar title="Harshit" link="link1"/>
+      {/* <NavBar/> */}
     </div>
     </>
   );
