@@ -31,8 +31,17 @@ export default function NavBar(props) {
   )
 }
 
+
+// Act as an check for props sent to the function
 NavBar.propTypes = 
     {
         title: PropTypes.string,
         link: PropTypes.string
     }
+
+    // when no Props are sent to function--- we can set some default props
+NavBar.defaultProps = 
+{
+    title: "Set Title Here...",
+    link: "Set Link Here..."
+}
