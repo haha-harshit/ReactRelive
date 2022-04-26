@@ -10,11 +10,14 @@ import NavBar from './components/Navbar/NavBar';
 function App() {
   return (
     <>
-    <div className="inp-form">
-      <NavBar title="TEXTit" link="link1"/>
+    <div className="app-body">
+      {/* NAVBAR COMPONENT */}
+      <NavBar link="link1"/>
+        
       <div className="container">
-        <TextForm text ="Enter your text here..."/>
-      </div>
+        {/* TEXT-FORM COMPONENT */}
+        <TextForm text ="Enter your text below..."/>
+        </div>
     </div>
     </>
   );
