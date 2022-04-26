@@ -16,7 +16,7 @@ function App() {
         
       <div className="container">
         {/* TEXT-FORM COMPONENT */}
-        <TextForm text ="Enter your text below..."/>
+        <TextForm heading ="Enter your text below"/>
         </div>
     </div>
     </>
