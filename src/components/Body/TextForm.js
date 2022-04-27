@@ -3,6 +3,7 @@ import FormBtn from './FormBtn'
 
 export default function TextForm(props) {
 
+  let readTime = 0;
   const handleOnChange = (event) => {
     console.log("On Change");
     setText(event.target.value);
@@ -12,6 +13,20 @@ export default function TextForm(props) {
   //   setText(newText);
   // }
   const [text, setText] = useState("Write or Paste text here...");
+
+  if(text.trim().split(" ").length ===0){
+    readTime = 0;
+  }else{
+    readTime = 0.008 * text.trim().split(" ").length;
+  }
+
+  let w_count = 0;
+  if(text.trim().split(" ").length === 0){
+    w_count = 0;
+  }else{
+    w_count = text.trim().split(" ").length
+  }
+
   // text = "change text using this way" ---> wrong way to change text
   // setText("change this way") ---> right way to change text 
   return (
@@ -26,7 +41,10 @@ export default function TextForm(props) {
       </div>
       <div className="container">
         <h3>Text Summary</h3>
-        <p>word count: {text.split(" ").length - 1}, characters: {text.length}</p>
+        <p>Word count: {w_count}, Characters: {text.length}</p>
+        <p>
+          {readTime} Minutes read
+        </p>
       </div>
 
     </>
