@@ -24,6 +24,10 @@ export default function FormBtn(props) {
     }
   }
 
+  // const handleClearclick = () => {
+  //   props.setText('');
+  // }
+
   return (
     <>
         <span>
@@ -41,6 +45,12 @@ export default function FormBtn(props) {
         <span>
           <button className="btn btn-primary" onClick={handleRemoveWhite}>
             Remove Whitespace
+          </button>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+          <button className="btn btn-danger">
+            Clear
           </button>
         </span>
     </>
