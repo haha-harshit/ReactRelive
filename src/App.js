@@ -12,7 +12,7 @@ function App() {
     <>
     <div className="app-body">
       {/* NAVBAR COMPONENT */}
-      <NavBar link="link1"/>
+      <NavBar title="TextUtills" link="link1"/>
         
       <div className="container">
         {/* TEXT-FORM COMPONENT */}

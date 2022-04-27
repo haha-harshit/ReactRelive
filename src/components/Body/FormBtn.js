@@ -2,14 +2,17 @@ import React from 'react'
 
 export default function FormBtn(props) {
 
+  const handleRemoveWhite= ()=>{
+    console.log(props.text);
+    props.setText(props.text.split(' ').join(''));
+
+  }
+
   const handleUPclick = ()=> {
     if(props.text === props.text.toUpperCase()){
       return;
     }else{
-      console.log(props.text.toUpperCase());
-      // props.setText(JSON.stringify(props.text).toUpperCase());
       props.setText(props.text.toUpperCase())
-      console.log("Uppercase was clicked");
     }
   }
 
@@ -18,29 +21,28 @@ export default function FormBtn(props) {
       return;
     }else{
       props.setText(props.text.toLowerCase())
-      console.log("Lowercase was clicked");
     }
   }
 
   return (
     <>
-        <div>
+        <span>
           <button className="btn btn-primary" onClick={handleUPclick}>
               Convert to Uppercase
           </button>
-        </div>
-        <br />
-        <div>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
           <button className="btn btn-primary" onClick={handleLOWclick}>
             Convert to Lowercase
           </button>
-        </div>
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+          <button className="btn btn-primary" onClick={handleRemoveWhite}>
+            Remove Whitespace
+          </button>
+        </span>
     </>
   )
 }
-
-// FormBtn.propTypes = 
-//     {
-//         low: PropTypes.string.isRequired,
-//         link: PropTypes.string.isRequired
-//     }
