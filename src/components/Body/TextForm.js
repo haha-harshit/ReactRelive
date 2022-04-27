@@ -4,7 +4,7 @@ import FormBtn from './FormBtn'
 export default function TextForm(props) {
 
   const handleOnChange = (event) => {
-    console.log("On Change");    
+    console.log("On Change");
     setText(event.target.value);
   }
   // const handleUPClick = () => {
@@ -26,7 +26,7 @@ export default function TextForm(props) {
       </div>
       <div className="container">
         <h3>Text Summary</h3>
-        <p>word count: 50, characters: 552424</p>
+        <p>word count: {text.split(" ").length - 1}, characters: {text.length}</p>
       </div>
 
     </>
