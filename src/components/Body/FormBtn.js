@@ -24,9 +24,9 @@ export default function FormBtn(props) {
     }
   }
 
-  // const handleClearclick = () => {
-  //   props.setText('');
-  // }
+  const handleClearclick = () => {
+    console.log("clear");
+  }
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function FormBtn(props) {
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
-          <button className="btn btn-danger">
+          <button className="btn btn-danger" onClick={handleClearclick}>
             Clear
           </button>
         </span>
