@@ -16,15 +16,19 @@ export default function TextForm(props) {
   // setText("change this way") ---> right way to change text 
   return (
     <>
-      <br />
-      <div className="mb-3">
-        <br />
+      <div className="container my-5">
         <h2>{props.heading}</h2>
         <label htmlFor="myTextBox" className="form-label"></label>
         <textarea className="form-control" value={text} onChange={handleOnChange} id="myTextBox" rows="8"></textarea>
+        <br />
+        {/* <button className="btn btn-primary" onClick={handleUPClick}>HI</button> */}
+        <FormBtn text = {text} setText={setText}/>
       </div>
-      {/* <button className="btn btn-primary" onClick={handleUPClick}>HI</button> */}
-      <FormBtn text = {text} setText={setText}/>
+      <div className="container">
+        <h3>Text Summary</h3>
+        <p>word count: 50, characters: 552424</p>
+      </div>
+
     </>
   )
 }
