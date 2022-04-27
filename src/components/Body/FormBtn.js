@@ -25,7 +25,7 @@ export default function FormBtn(props) {
   }
 
   const handleClearclick = () => {
-    console.log("clear");
+    props.setText('');
   }
 
   return (
