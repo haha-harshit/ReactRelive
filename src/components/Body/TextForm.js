@@ -12,7 +12,7 @@ export default function TextForm(props) {
   //   let newText = text.toUpperCase();
   //   setText(newText);
   // }
-  const [text, setText] = useState("Write or Paste text here...");
+  const [text, setText] = useState("");
 
   if(text.trim().split(" ").length ===0){
     readTime = 0;
@@ -34,19 +34,17 @@ export default function TextForm(props) {
       <div className="container my-5">
         <h2>{props.heading}</h2>
         <label htmlFor="myTextBox" className="form-label"></label>
-        <textarea className="form-control" value={text} onChange={handleOnChange} id="myTextBox" rows="8"></textarea>
+        <textarea className="form-control" placeholder="Write or Paste text here..." value={text} onChange={handleOnChange} id="myTextBox" rows="8"></textarea>
         <br />
         {/* <button className="btn btn-primary" onClick={handleUPClick}>HI</button> */}
         <FormBtn text = {text} setText={setText}/>
       </div>
       <div className="container">
-        <h3>Text Summary</h3>
+        <h3>Text Summary: </h3>
         <p>Word count: {w_count}, Characters: {text.length}</p>
-        <p>
-          {readTime} Minutes read
-        </p>
+        <p>{readTime} Minutes read</p>
+        <p><span>Text Preview: </span>{text}</p>
       </div>
-
     </>
   )
 }
