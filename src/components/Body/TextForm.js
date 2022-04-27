@@ -35,12 +35,13 @@ export default function TextForm(props) {
 
         <FormBtn text = {text} setText={setText}/>
       </div>
-      
+
       <div className="container">
         <h3>Text Summary: </h3>
         <p>Word count: {w_count}, Characters: {text.length}</p>
         <p>{readTime} Minutes read</p>
         <p><span>Text Preview: </span>{text}</p>
+        <p>hey</p>
       </div>
     </>
   )
