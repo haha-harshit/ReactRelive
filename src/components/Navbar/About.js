@@ -11,13 +11,16 @@ export default function About() {
     // flag state for button- dark/light mode 
     const [isDark, setisDark] = useState(false);
 
+    // text state for dark/light mode
+    const [btnText, setbtnText] = useState("Enable Dark Mode");
+
     const darkModeOnClick = () => {
         if(isDark){
-            document.getElementById('darkMode').innerHTML = "Enable Dark Mode"
+            setbtnText("Enable Dark Mode");
             setmyStyle({color: 'black', backgroundColor: 'white'})
             setisDark(false);
         }else{
-            document.getElementById('darkMode').innerHTML = "Enable Light Mode"
+            setbtnText("Enable Light Mode");
             setmyStyle({color: 'white', backgroundColor: 'black'})
             setisDark(true);
         }
@@ -66,7 +69,8 @@ export default function About() {
                 </div>
             </div>
             </div>
-            <button id='darkMode' type="button" className="btn btn-primary my-2" onClick={darkModeOnClick}>Enable Dark Mode</button>
+
+            <button id='darkMode' type="button" className="btn btn-primary my-2" onClick={darkModeOnClick}>{btnText}</button>
 
         </>
   )
