@@ -15,10 +15,6 @@ function App() {
         <TextForm heading ="Enter your text below"/>
       </div> */}
 
-      <div className="container">
-      <button type="button" className="btn btn-primary">Enable Dark Mode</button>
-      </div>
-
       <div className="container my-5">
         <About/>
       </div>

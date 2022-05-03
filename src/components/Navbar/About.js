@@ -2,10 +2,26 @@ import React, { useState } from 'react'
 
 export default function About() {
 
+    // style state
     const [myStyle, setmyStyle] = useState({
-        color: 'white',
-        backgroundColor: 'black'
+        color: 'black',
+        backgroundColor: 'white'
     })
+
+    // flag state for button- dark/light mode 
+    const [isDark, setisDark] = useState(false);
+
+    const darkModeOnClick = () => {
+        if(isDark){
+            document.getElementById('darkMode').innerHTML = "Enable Dark Mode"
+            setmyStyle({color: 'black', backgroundColor: 'white'})
+            setisDark(false);
+        }else{
+            document.getElementById('darkMode').innerHTML = "Enable Light Mode"
+            setmyStyle({color: 'white', backgroundColor: 'black'})
+            setisDark(true);
+        }
+    }
 
     return (  
         <>
@@ -50,6 +66,8 @@ export default function About() {
                 </div>
             </div>
             </div>
+            <button id='darkMode' type="button" className="btn btn-primary my-2" onClick={darkModeOnClick}>Enable Dark Mode</button>
+
         </>
   )
 }
