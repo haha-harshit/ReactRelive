@@ -11,8 +11,12 @@ function App() {
 
       <NavBar title="TextUtills" link="About"/>
 
-      <div className="container">
+      {/* <div className="container">
         <TextForm heading ="Enter your text below"/>
+      </div> */}
+
+      <div className="container">
+      <button type="button" className="btn btn-primary">Enable Dark Mode</button>
       </div>
 
       <div className="container my-5">
