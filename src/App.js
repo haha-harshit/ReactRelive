@@ -1,23 +1,24 @@
 
 import './App.css';
 import TextForm from './components/Body/TextForm';
+import About from './components/Navbar/About';
 import NavBar from './components/Navbar/NavBar';
-// const obj ={
-//   hi: "link1",
-//   ho: "link2"
-// }
 
 function App() {
   return (
     <>
     <div className="app-body">
-      {/* NAVBAR COMPONENT */}
+
       <NavBar title="TextUtills" link="link1"/>
-        
+
       <div className="container">
-        {/* TEXT-FORM COMPONENT */}
         <TextForm heading ="Enter your text below"/>
-        </div>
+      </div>
+
+      <div className="container my-5">
+        <About/>
+      </div>
+      
     </div>
     </>
   );
