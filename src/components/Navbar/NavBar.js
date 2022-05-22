@@ -3,9 +3,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function NavBar(props) {
+    let darkClass;
+    if(props.mode){
+        darkClass = "navbar-dark bg-dark"
+    }else{
+        darkClass = ""
+    }
   return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className={`navbar navbar-expand-lg + ${darkClass}`}>
         <div className="container-fluid">
         <a className="navbar-brand" href="/"><b>{props.title}</b></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
