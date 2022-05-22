@@ -11,9 +11,9 @@ function App() {
 
       <NavBar title="TextUtills" link="About"/>
 
-      {/* <div className="container">
+      <div className="container">
         <TextForm heading ="Enter your text below"/>
-      </div> */}
+      </div>
 
       <div className="container my-5">
         <About/>

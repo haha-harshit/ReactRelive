@@ -69,8 +69,12 @@ export default function About() {
                 </div>
             </div>
             </div>
+{/* 
+            <span className='material-icons-outlined'>dark_mode</span> */}
 
             <button id='darkMode' type="button" className="btn btn-primary my-2 mx-2" onClick={darkModeOnClick}>{btnText}</button>
+
+            {/* <img src="dark-moon.png" alt="" />  */}
 
         </>
   )

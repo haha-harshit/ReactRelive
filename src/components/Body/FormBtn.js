@@ -4,8 +4,8 @@ export default function FormBtn(props) {
 
   const handleRemoveWhite= ()=>{
     console.log(props.text);
-    props.setText(props.text.split(' ').join(''));
-
+    let newText = props.text.split(/[ ]+/);
+    props.setText(newText.join(' '));
   }
 
   const handleUPclick = ()=> {
@@ -22,6 +22,11 @@ export default function FormBtn(props) {
     }else{
       props.setText(props.text.toLowerCase())
     }
+  }
+
+  const handleCopyText = () => {
+    var text = document.getElementById("myTextBox");
+    navigator.clipboard.writeText(text.value);
   }
 
   const handleClearclick = () => {
@@ -47,6 +52,14 @@ export default function FormBtn(props) {
             Remove Whitespace
           </button>
         </span>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>
+          <button className="btn btn-primary" onClick={handleCopyText}>
+            Copy Text
+          </button>
+        </span>
+
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
           <button className="btn btn-danger" onClick={handleClearclick}>
