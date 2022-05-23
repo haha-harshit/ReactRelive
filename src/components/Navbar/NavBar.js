@@ -4,16 +4,13 @@ import PropTypes from 'prop-types'
 
 export default function NavBar(props) {
     let darkClass;
-    // let switchTextColor;
     let switchText = document.getElementsByClassName("form-check-label");
     if(props.mode === "dark"){
         darkClass = "navbar-dark bg-dark"
         switchText.innerHTML = "Day Mode"
-        // switchTextColor = "light"
     }else{
         darkClass = "";
         switchText.innerHTML = "Night Mode"
-        // switchTextColor = "dark";
     }
   return (
       <>

@@ -25,7 +25,7 @@ function App() {
       <NavBar title="TextUtills" link="About" mode={darkMode} toggleMode={toggleMode}/>
 
       <div className="container">
-        <TextForm heading ="Enter your text below"/>
+        <TextForm heading ="Enter your text below" mode={darkMode}/>
       </div>
 
       <div className="container my-5">

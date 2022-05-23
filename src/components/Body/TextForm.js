@@ -28,7 +28,7 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container my-5">
-        <h2>{props.heading}</h2>
+        <h2 style={{color: props.mode==='dark'?'white':'black'}}>{props.heading}</h2>
         <label htmlFor="myTextBox" className="form-label"></label>
         <textarea className="form-control" placeholder="Write or Paste text here..." value={text} onChange={handleOnChange} id="myTextBox" rows="8"></textarea>
         <br />
