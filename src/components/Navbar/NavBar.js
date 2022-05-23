@@ -4,10 +4,16 @@ import PropTypes from 'prop-types'
 
 export default function NavBar(props) {
     let darkClass;
+    let switchTextColor;
+    let switchText = document.getElementsByClassName("form-check-label");
     if(props.mode){
         darkClass = "navbar-dark bg-dark"
+        switchText.innerHTML = "Day Mode"
+        switchTextColor = "text-light"
     }else{
-        darkClass = ""
+        darkClass = "";
+        switchText.innerHTML = "Night Mode"
+        switchTextColor = "text-dark";
     }
   return (
       <>
@@ -27,8 +33,13 @@ export default function NavBar(props) {
             </li>
             </ul>
             <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <div className={`form-check form-switch + ${switchTextColor}`}>
+                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}></input>
+                <label className="form-check-label" htmlFor="flexSwitchCheckDefault" >{switchText.innerHTML}</label>
+            </div>
+
+            {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button className="btn btn-outline-success" type="submit">Search</button> */}
             </form>
         </div>
         </div>

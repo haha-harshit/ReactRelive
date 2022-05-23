@@ -6,13 +6,20 @@ import NavBar from './components/Navbar/NavBar';
 
 function App() {
 
-  const [darkMode, setdarkMode] = useState(false)
 
+  let [darkMode, setdarkMode] = useState(false)
+  const toggleMode = () => {
+    if(darkMode){
+      setdarkMode(false);
+    }else{
+      setdarkMode(true);
+    }
+  }
   return (
     <>
     <div className="app-body">
 
-      <NavBar title="TextUtills" link="About" mode={darkMode}/>
+      <NavBar title="TextUtills" link="About" mode={darkMode} toggleMode={toggleMode}/>
 
       <div className="container">
         <TextForm heading ="Enter your text below"/>
