@@ -7,12 +7,15 @@ import NavBar from './components/Navbar/NavBar';
 function App() {
 
 
-  let [darkMode, setdarkMode] = useState(false)
+  let [darkMode, setdarkMode] = useState("light")
   const toggleMode = () => {
-    if(darkMode){
-      setdarkMode(false);
+    if(darkMode==="dark"){
+      document.body.style.backgroundColor = "white"
+      setdarkMode("light");
     }else{
-      setdarkMode(true);
+      document.body.style.backgroundColor = "grey"
+      setdarkMode("dark");
+
     }
   }
   return (
