@@ -10,10 +10,10 @@ function App() {
   let [darkMode, setdarkMode] = useState("light")
   const toggleMode = () => {
     if(darkMode==="dark"){
-      document.body.style.backgroundColor = "white"
+      document.body.style.backgroundColor = "#fff"
       setdarkMode("light");
     }else{
-      document.body.style.backgroundColor = "grey"
+      document.body.style.backgroundColor = "#484f4f"
       setdarkMode("dark");
 
     }
@@ -29,7 +29,7 @@ function App() {
       </div>
 
       <div className="container my-5">
-        <About/>
+        <About mode={darkMode}/>
       </div>
       
     </div>
