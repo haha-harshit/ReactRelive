@@ -42,7 +42,7 @@ export default function TextForm(props) {
         <h3>Text Summary: </h3>
         <p>Word count: {w_count}, Characters: {text.length}</p>
         <p>{readTime} Minutes read</p>
-        <p><span>Text Preview: </span>{text}</p>
+        <p><span>Text Preview: </span>{text.length>0?text:"Enter text to preview!"}</p>
       </div>
     </>
   )

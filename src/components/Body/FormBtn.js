@@ -15,6 +15,7 @@ export default function FormBtn(props) {
       // console.log(props.mode);
       props.setText(props.text.toUpperCase())
     }
+    
   }
 
   const handleLOWclick = () => {
