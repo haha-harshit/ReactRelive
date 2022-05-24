@@ -17,7 +17,11 @@ export default function TextForm(props) {
   }
 
   let w_count = 0;
-  if(text.trim().split(" ").length === 0){
+  // console.log(w_count)
+  // if(text){
+  //   w_count = 0;
+  // }
+  if(text.trim().split(" ").length=== 0){
     w_count = 0;
   }else{
     w_count = text.trim().split(" ").length
@@ -40,7 +44,7 @@ export default function TextForm(props) {
 
       <div className="container" style={{color: colour}}>
         <h3>Text Summary: </h3>
-        <p>Word count: {w_count}, Characters: {text.length}</p>
+        <p>Word count: {w_count===0?0:w_count}, Characters: {text.length}</p>
         <p>{readTime} Minutes read</p>
         <p><span>Text Preview: </span>{text.length>0?text:"Enter text to preview!"}</p>
       </div>

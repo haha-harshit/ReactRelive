@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <div className="app-body">
-      <NavBar title="TextUtills" link="About" mode={darkMode} toggleMode={toggleMode}/>
+      <NavBar title="myText" link="About" mode={darkMode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container" style={{zIndex:0}}>
         <TextForm heading ="Enter your text below" mode={darkMode} alert={alert} showAlert={showAlert}/>
