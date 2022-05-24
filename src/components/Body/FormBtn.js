@@ -6,13 +6,16 @@ export default function FormBtn(props) {
     console.log(props.text);
     let newText = props.text.split(/[ ]+/);
     props.setText(newText.join(' '));
+    props.showAlert("Extra whitespace removed!", "success");
   }
 
   const handleUPclick = ()=> {
     if(props.text === props.text.toUpperCase()){
+      props.showAlert("Text already in Uppercase!", "warning");
       return;
     }else{
       // console.log(props.mode);
+      props.showAlert("Text converted in Uppercase!", "success");
       props.setText(props.text.toUpperCase())
     }
     
@@ -20,8 +23,10 @@ export default function FormBtn(props) {
 
   const handleLOWclick = () => {
     if(props.text === props.text.toLowerCase()){
+      props.showAlert("Text already in Lowercase!", "warning");
       return;
     }else{
+      props.showAlert("Text converted in Lowercase!", "success");
       props.setText(props.text.toLowerCase())
     }
   }
@@ -29,10 +34,12 @@ export default function FormBtn(props) {
   const handleCopyText = () => {
     var text = document.getElementById("myTextBox");
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text copied to clipboard!", "success");
   }
 
   const handleClearclick = () => {
     props.setText('');
+    props.showAlert("Text cleared!", "success");
   }
 
   let btnState;

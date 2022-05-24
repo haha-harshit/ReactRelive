@@ -35,7 +35,7 @@ export default function TextForm(props) {
         <textarea className="form-control" style={{backgroundColor: props.mode==='dark'?'rgb(52, 53, 53)':'white', color: colour}} placeholder="Write or Paste text here..." value={text} onChange={handleOnChange} id="myTextBox" rows="8"></textarea>
         <br />
 
-        <FormBtn text = {text} setText={setText} mode={props.mode}/>
+        <FormBtn text = {text} setText={setText} mode={props.mode} alert={props.alert} showAlert={props.showAlert}/>
       </div>
 
       <div className="container" style={{color: colour}}>

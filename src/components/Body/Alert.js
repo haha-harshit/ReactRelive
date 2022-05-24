@@ -1,10 +1,17 @@
 import React from 'react'
 
 export default function Alert (props) {
-  return (
-    <div className="alert alert-warning alert-dismissible fade show" role="alert">
-      {props.alert}
-      <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  )
+  // const [showAlert, setshowAlert] = useState(null);
+  // console.log(props.alert);
+  // if(props.alert == null){
+  //   return(<></>)
+  // }else{
+    // console.log(props.alert.msg)
+    return (
+      props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+        {props.alert.msg}
+        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    )
+  // }
 }

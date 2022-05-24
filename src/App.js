@@ -8,26 +8,33 @@ import NavBar from './components/Navbar/NavBar';
 function App() {
 
   const [darkMode, setdarkMode] = useState("light")
-  const [alertText, setalertText] = useState(null)
+  const [alert, setAlert] = useState(null)
+
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type
+    })
+  }
+
   const toggleMode = () => {
     if(darkMode==="dark"){
-      setalertText("Dark mode disabled!");
+      showAlert("Dark mode disabled!", 'success');
       document.body.style.backgroundColor = "#fff"
       setdarkMode("light");
     }else{
-      setalertText("Dark mode enabled!");
+      showAlert("Dark mode enabled!", 'success');
       document.body.style.backgroundColor = "#484f4f"
       setdarkMode("dark");
     }
   }
   return (
     <>
-    <div className="app-body">
-
+      <div className="app-body">
       <NavBar title="TextUtills" link="About" mode={darkMode} toggleMode={toggleMode}/>
-      <Alert alert={alertText}/>
+      <Alert alert={alert}/>
       <div className="container">
-        <TextForm heading ="Enter your text below" mode={darkMode}/>
+        <TextForm heading ="Enter your text below" mode={darkMode} alert={alert} showAlert={showAlert}/>
       </div>
 
       <div className="container my-5">
