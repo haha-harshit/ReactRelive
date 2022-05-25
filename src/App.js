@@ -47,13 +47,13 @@ export default function App() {
         <Alert alert={alert}/>
         
         <Switch>
-          <Route path="/about">
+          <Route exact path="/about">
             <div className="container my-5">
               <About mode={darkMode}/>
             </div>
           </Route>
 
-          <Route path="/">  
+          <Route exact path="/">  
             <div className="container" style={{zIndex:0}}>
               <TextForm heading ="Enter your text below" mode={darkMode} alert={alert} showAlert={showAlert}/>
             </div>
