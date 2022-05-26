@@ -54,33 +54,33 @@ export default function FormBtn(props) {
   return (
     <>
         <span>
-          <button className={`btn ${btnState}`} onClick={handleUPclick}>
+          <button disabled={props.text.length===0} className={`btn ${btnState}`} onClick={handleUPclick}>
               Convert to Uppercase
           </button>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
-          <button className={`btn ${btnState}`} onClick={handleLOWclick}>
+          <button disabled={props.text.length===0} className={`btn ${btnState}`} onClick={handleLOWclick}>
             Convert to Lowercase
           </button>
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
-          <button className={`btn ${btnState}`} onClick={handleRemoveWhite}>
+          <button disabled={props.text.length===0} className={`btn ${btnState}`} onClick={handleRemoveWhite}>
             Remove Whitespace
           </button>
         </span>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
-          <button className={`btn ${btnState}`} onClick={handleCopyText}>
+          <button disabled={props.text.length===0} className={`btn ${btnState}`} onClick={handleCopyText}>
             Copy Text
           </button>
         </span>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
         <span>
-          <button className="btn btn-danger" onClick={handleClearclick}>
+          <button disabled={props.text.length===0} className="btn btn-danger" onClick={handleClearclick}>
             Clear
           </button>
         </span>
